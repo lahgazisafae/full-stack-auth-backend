@@ -1,0 +1,7 @@
+class UserController < ApplicationController
+
+  
+
+
+
+end
