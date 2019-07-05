@@ -12,6 +12,7 @@ class ApplicationController < ActionController::API
 
     def authorize
         unless current_user return nil 
+        end
     end
 
 
