@@ -7,8 +7,8 @@ class ApplicationController < ActionController::API
 
         token = request.headers['Access-Token']
         return nil unless token
-        @user_id = JWT.decode(token, 'mys3cr3t').first 
-        current_user = User.find_by(@user_id)
+        @user_id = JWT.decode(token, 'mys3cr3t').first['user_id']
+        current_user = User.find(@user_id)
     end
     
     def authorize

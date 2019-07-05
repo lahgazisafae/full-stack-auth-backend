@@ -6,6 +6,6 @@ resources :users, only: [:create]
 
 post '/login', to: "sessions#authenticate" 
 
-patch '/profile/edit', to: "profiles#edit"
+post '/profile/edit', to: "profiles#edit"
 
 end
