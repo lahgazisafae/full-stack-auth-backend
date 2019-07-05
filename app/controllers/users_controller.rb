@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    before_action: :authorize, only: [:edit]
   
     def create
         @user = User.new(user_params)
@@ -11,6 +11,11 @@ class UsersController < ApplicationController
         end
 
     end
+
+    def edit
+        render json: {message: "You have edited successfully"}
+    end
+
 
     def user_params
 
